@@ -4,7 +4,7 @@
 '''
 Created on 2015/02/26
 
-@author: Kentaro Tanaka
+@author: spiralray
 '''
 
 import sys
@@ -33,7 +33,7 @@ def callback(msg):
     pubmsg = servo()
     pubmsg.stamp = rospy.get_rostime()
     pubmsg.id = msg.id
-    pubmsg.angle = (k.setAngle(msg.id, 7500 + msg.angle/0.000785398 )-7500) * 0.000785398
+    pubmsg.angle = (k.setAngle(msg.id, 7500 + msg.angle/0.000460194 )-7500) * 0.000460194
     pub.publish( pubmsg )
     
 if __name__ == '__main__':
